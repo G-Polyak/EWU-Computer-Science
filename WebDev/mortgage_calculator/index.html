@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Mortgage Calculator</title>
+		<link href="../global.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<table border='0'>
+			<tr>
+				<td>Principal:</td><td><input type='text' id="sp"></td>
+			</tr>
+			<tr>
+				<td>Annual Interest:</td><td><input type='text' id="i"></td>
+			</tr>
+			<tr>
+				<td>Payment Amount:</td><td><input type='text' id="p"></td>
+			</tr>
+			<tr>
+				<td></td><td><input type='button' value='Compute Mortgage' onclick="calculate()"></td>
+			</tr>
+		<table border='1' id="t" class="prettyTable">
+			<tr>
+				<th>Starting Principal</th>
+				<th>Interest Amount</th>
+				<th>Payment</th>
+				<th>Ending Balance</th>
+			</tr>
+		</table>
+		</table>
+		<script type="application/javascript" src="calculator.js"></script>
+	</body>
+</html>

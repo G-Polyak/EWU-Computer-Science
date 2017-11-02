@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Lookup</title>
+    <link href="../global.css" rel="stylesheet" type="text/css">
+</head>
+<body style="max-width: 720px">
+    <label>
+        <input type="text" size="32" id="input">
+    </label>
+    <button id="btnSearch">Search</button>
+    <label>
+        <input type="text" size="32" id="inputYoda">
+    </label>
+    <button id="btnYodaPhrase">Yoda Phrase</button>
+    <p id="word" style=" font-size: 200%; font-style: italic; font-weight: bold; "></p>
+    <p id="yodaPhrase" style=" font-size: 175%; font-weight: bold; float: left; "></p>
+    <table id="defTable" class="table prettyTable" style=" float: left; ">
+        <tr>
+            <th>Definitions</th>
+        </tr>
+    </table>
+    <table id="synTable" class="table prettyTable" style=" max-width: 180px; float: left; ">
+        <tr>
+            <th>Synonyms</th>
+        </tr>
+    </table>
+    <table id="antTable" class="table prettyTable" style=" max-width: 180px; float: left; ">
+        <tr>
+            <th>Antonyms</th>
+        </tr>
+    </table>
+    <table id="anaTable" class="table prettyTable" style=" max-width: 180px; float: left; ">
+        <tr>
+            <th>Anagrams</th>
+        </tr>
+    </table>
+    <table id="transTable" class="table prettyTable" style=" max-width: 180px; float: left; ">
+        <tr>
+            <th>Translations</th>
+        </tr>
+    </table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="lookup.js"></script>
+</html>

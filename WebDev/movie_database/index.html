@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Database</title>
+    <link href="../global.css" rel="stylesheet" type="text/css">
+</head>
+<body style="max-width: 85%">
+    <h1 style="align-content: center">Movie Database</h1>
+    <div style=" overflow:scroll; height:350px; ">
+        <table border='1' id="tableData" class="prettyTable">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Studio</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        </table>
+    </div>
+    <button id="addEntry">Add Entry</button>
+    <button id="cancel">Cancel</button>
+    <table border='1' id="tableEntry" class="prettyTable">
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Studio</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="inputTitle"></td>
+            <td><input type="text" id="inputYear"></td>
+            <td><input type="text" id="inputStudio"></td>
+            <td><input type="text" id="inputDesc"></td>
+            <td><input type="text" id="inputPrice"></td>
+            <td><button id="add">Add</button></td>
+            <td><button id="edit">Edit</button></td>
+        </tr>
+    </table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
