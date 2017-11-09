@@ -58,7 +58,15 @@ vtkLookupTable hueLut
   hueLut SetHueRange  0 .667
   hueLut SetSaturationRange 1 1
   hueLut SetValueRange 1 1
-
+  hueLut Build
+  
+vtkScalarBarActor scalarBar
+	scalarBar SetLookupTable hueLut
+	scalarBar SetTitle "Temperature"
+	[scalarBar GetPositionCoordinate] SetCoordinateSystemToNormalizedViewport
+	[scalarBar GetPositionCoordinate] SetValue 0.01 0.1
+	scalarBar SetWidth 0.15
+	scalarBar SetHeight 0.9
 # Finally, create a lookup table with a single hue but having a range
 # in the saturation of the hue.
 
@@ -76,6 +84,9 @@ vtkImageMapToColors sagittalColors
 vtkImageActor sagittal
   [sagittal GetMapper] SetInputConnection [sagittalColors GetOutputPort]
   sagittal SetDisplayExtent 7 7  1 18  1 10
+  
+vtkTextActor textActor
+	textActor SetInput "Pressure probe along Z at 7"
 
 # Create the second (axial) plane of the three planes. We use the same
 # approach as before except that the extent differs.
@@ -96,6 +107,8 @@ vtkCamera aCamera
 # Actors are added to the renderer.
 aRenderer AddActor outline
 aRenderer AddActor sagittal
+aRenderer AddActor scalarBar
+aRenderer AddActor textActor
 
 # Turn off bone for this example.
 
@@ -109,7 +122,7 @@ aCamera Dolly 1.5
 
 # Set a background color for the renderer and set the size of the
 # render window (expressed in pixels).
-aRenderer SetBackground 1 1 1
+aRenderer SetBackground 0 0.15 0.22
 renWin SetSize 640 480
 
 # Note that when camera movement occurs (as it does in the Dolly()

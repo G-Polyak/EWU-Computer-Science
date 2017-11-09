@@ -50,12 +50,22 @@ vtkActor outline
   outline SetMapper mapOutline
   [outline GetProperty] SetColor 1 1 1
   
+vtkLookupTable hueLut
+  hueLut SetHueRange  0 .667
+  hueLut SetSaturationRange 1 1
+  hueLut SetValueRange 1 1
+  hueLut Build
+  
 vtkScalarBarActor scalarBar
+	scalarBar SetLookupTable hueLut
 	scalarBar SetTitle "Temperature"
 	[scalarBar GetPositionCoordinate] SetCoordinateSystemToNormalizedViewport
 	[scalarBar GetPositionCoordinate] SetValue 0.01 0.1
 	scalarBar SetWidth 0.15
 	scalarBar SetHeight 0.9
+	
+vtkTextActor textActor
+	textActor SetInput "Global Temperature"
 
 # It is convenient to create an initial view of the data. The FocalPoint
 # and Position form a vector direction. Later on (ResetCamera() method)
@@ -73,6 +83,7 @@ vtkCamera aCamera
 aRenderer AddActor outline
 aRenderer AddActor skin
 aRenderer AddActor scalarBar
+aRenderer AddActor textActor
 aRenderer SetActiveCamera aCamera
 aRenderer ResetCamera
 aCamera Dolly 1.5

@@ -51,7 +51,23 @@ vtkPolyDataMapper mapOutline
 vtkActor outline
   outline SetMapper mapOutline
   [outline GetProperty] SetColor 0 0 0
+  
+vtkLookupTable hueLut
+  hueLut SetHueRange  0 .667
+  hueLut SetSaturationRange 1 1
+  hueLut SetValueRange 1 1
+  hueLut Build
+  
+vtkScalarBarActor scalarBar
+	scalarBar SetLookupTable hueLut
+	scalarBar SetTitle "Temperature"
+	[scalarBar GetPositionCoordinate] SetCoordinateSystemToNormalizedViewport
+	[scalarBar GetPositionCoordinate] SetValue 0.01 0.1
+	scalarBar SetWidth 0.15
+	scalarBar SetHeight 0.9
 
+vtkTextActor textActor
+	textActor SetInput "Pressure extracted at 0.3"
 # It is convenient to create an initial view of the data. The FocalPoint
 # and Position form a vector direction. Later on (ResetCamera() method)
 # this vector is used to position the camera to look at the data in
@@ -67,13 +83,15 @@ vtkCamera aCamera
 # thereby enlarging the image.
 aRenderer AddActor outline
 aRenderer AddActor skin
+aRenderer AddActor scalarBar
+aRenderer AddActor textActor
 aRenderer SetActiveCamera aCamera
 aRenderer ResetCamera
 aCamera Dolly 1.5
 
 # Set a background color for the renderer and set the size of the
 # render window (expressed in pixels).
-aRenderer SetBackground 1 1 1
+aRenderer SetBackground 0 0.15 0.22
 renWin SetSize 640 480
 
 # Note that when camera movement occurs (as it does in the Dolly()
