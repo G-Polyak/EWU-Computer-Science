@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="66240890-edd9-42e0-9c12-7dd9c8334c74" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/fonts/slate.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/fonts/slate.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/fonts/slate.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/fonts/slate.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/images/navbar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/fonts/slate.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/javascripts/all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/javascripts/all_nosearch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/stylesheets/print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/stylesheets/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/tester/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/tester/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/v1/all/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/v1/creds.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/v1/noodles/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pasta_api/v1/shapes/index.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pasta_api/v1/all/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="150" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="153" selection-end-column="1" />
+              <folding>
+                <marker date="1510698651986" expanded="true" signature="417:450" ph="SELECT * FRO... pasta" />
+                <marker date="1510698651986" expanded="true" signature="1127:1190" ph="DELETE FROM " />
+                <marker date="1510698651986" expanded="true" signature="1169:1189" ph="SELECT id FR... pasta" />
+                <marker date="1510698651986" expanded="true" signature="1383:1427" ph="SELECT * FRO... pasta" />
+                <marker date="1510698651986" expanded="true" signature="1770:1845" ph="SELECT * FRO... pasta" />
+                <marker date="1510698651986" expanded="true" signature="2671:2756" ph="UPDATE pasta... " />
+                <marker date="1510698651986" expanded="true" signature="2919:2998" ph="INSERT INTO pasta... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pasta_api/v1/noodles/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+              <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+              <caret line="55" column="98" lean-forward="false" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+              <caret line="66" column="55" lean-forward="false" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+              <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+              <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+              <caret line="136" column="45" lean-forward="false" selection-start-line="136" selection-start-column="45" selection-end-line="136" selection-end-column="45" />
+              <folding>
+                <marker date="1510698651966" expanded="true" signature="417:431" ph="SELECT * FRO... pasta_noodles" />
+                <marker date="1510698651966" expanded="true" signature="417:458" ph="SELECT * FRO... pasta_noodles" />
+                <marker date="1510698651966" expanded="true" signature="1135:1214" ph="DELETE FROM " />
+                <marker date="1510698651966" expanded="true" signature="1185:1213" ph="SELECT id FR... pasta_noodles" />
+                <marker date="1510698651966" expanded="true" signature="1407:1459" ph="SELECT * FRO... pasta_noodles" />
+                <marker date="1510698651966" expanded="true" signature="1802:1885" ph="SELECT * FRO... pasta_noodles" />
+                <marker date="1510698651966" expanded="true" signature="2711:2804" ph="UPDATE pasta... " />
+                <marker date="1510698651966" expanded="true" signature="2967:3054" ph="INSERT INTO pasta_noodles... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pasta_api/v1/shapes/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+              <folding>
+                <marker date="1510698651978" expanded="true" signature="417:431" ph="SELECT * FRO... pasta_shapes" />
+                <marker date="1510698651978" expanded="true" signature="417:457" ph="SELECT * FRO... pasta_shapes" />
+                <marker date="1510698651978" expanded="true" signature="1134:1211" ph="DELETE FROM " />
+                <marker date="1510698651978" expanded="true" signature="1183:1210" ph="SELECT id FR... pasta_shapes" />
+                <marker date="1510698651978" expanded="true" signature="1404:1455" ph="SELECT * FRO... pasta_shapes" />
+                <marker date="1510698651978" expanded="true" signature="1798:1880" ph="SELECT * FRO... pasta_shapes" />
+                <marker date="1510698651978" expanded="true" signature="2706:2798" ph="UPDATE pasta... " />
+                <marker date="1510698651978" expanded="true" signature="2961:3047" ph="INSERT INTO pasta_shapes... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pasta_api/tester/script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1200">
+              <caret line="134" column="30" lean-forward="false" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="30" />
+              <folding>
+                <marker date="1510614933119" expanded="true" signature="1386:1399" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pasta_api/tester/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding>
+                <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Kittn</find>
+      <find>Kittens</find>
+      <find>breed</find>
+      <find>fluffiness</find>
+      <find>cuteness</find>
+      <find>Kitten</find>
+      <find>pasta_shapes</find>
+      <find>pasta</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/landingpage.html" />
+        <option value="$PROJECT_DIR$/pasta_api/tester/index.html" />
+        <option value="$PROJECT_DIR$/pasta_api/tester/script.js" />
+        <option value="$PROJECT_DIR$/slate-master/source/includes/_errors.md" />
+        <option value="$PROJECT_DIR$/pasta_api/v1/all/index.php" />
+        <option value="$PROJECT_DIR$/pasta_api/v1/noodles/index.php" />
+        <option value="$PROJECT_DIR$/pasta_api/v1/shapes/index.php" />
+        <option value="$PROJECT_DIR$/slate-master/source/index.html.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-1" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="WebDev" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebDev" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.landingpage.html">
+    <configuration name="landingpage.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebDev/landingpage.html" />
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.landingpage.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66240890-edd9-42e0-9c12-7dd9c8334c74" name="Default" comment="" />
+      <created>1509662037432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1509662037432</updated>
+      <workItem from="1509662040329" duration="1307000" />
+      <workItem from="1509664634820" duration="6000" />
+      <workItem from="1510372201955" duration="37740000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="39053000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24597365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Partially finished pasta api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Partially finished pasta api" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/landingpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/landingpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/landingpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/v1/creds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slate-master/source/stylesheets/screen.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movie_database/toolkit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-491">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1509661943483" expanded="true" signature="441:461" ph="SELECT * FRO... movies" />
+            <marker date="1509661943483" expanded="true" signature="630:661" ph="DELETE FROM " />
+            <marker date="1509661943483" expanded="true" signature="1077:1167" ph="UPDATE movie... " />
+            <marker date="1509661943483" expanded="true" signature="1353:1436" ph="INSERT INTO movies... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/tester/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slate-master/source/includes/_errors.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="58" lean-forward="false" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slate-master/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/tester/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="134" column="30" lean-forward="false" selection-start-line="134" selection-start-column="30" selection-end-line="134" selection-end-column="30" />
+          <folding>
+            <marker date="1510614933119" expanded="true" signature="1386:1399" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/v1/all/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="150" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="153" selection-end-column="1" />
+          <folding>
+            <marker date="1510698651986" expanded="true" signature="417:450" ph="SELECT * FRO... pasta" />
+            <marker date="1510698651986" expanded="true" signature="1127:1190" ph="DELETE FROM " />
+            <marker date="1510698651986" expanded="true" signature="1169:1189" ph="SELECT id FR... pasta" />
+            <marker date="1510698651986" expanded="true" signature="1383:1427" ph="SELECT * FRO... pasta" />
+            <marker date="1510698651986" expanded="true" signature="1770:1845" ph="SELECT * FRO... pasta" />
+            <marker date="1510698651986" expanded="true" signature="2671:2756" ph="UPDATE pasta... " />
+            <marker date="1510698651986" expanded="true" signature="2919:2998" ph="INSERT INTO pasta... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/v1/noodles/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+          <caret line="55" column="45" lean-forward="false" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <caret line="55" column="98" lean-forward="false" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+          <caret line="66" column="55" lean-forward="false" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
+          <caret line="85" column="55" lean-forward="false" selection-start-line="85" selection-start-column="55" selection-end-line="85" selection-end-column="55" />
+          <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+          <caret line="136" column="45" lean-forward="false" selection-start-line="136" selection-start-column="45" selection-end-line="136" selection-end-column="45" />
+          <folding>
+            <marker date="1510698651966" expanded="true" signature="417:431" ph="SELECT * FRO... pasta_noodles" />
+            <marker date="1510698651966" expanded="true" signature="417:458" ph="SELECT * FRO... pasta_noodles" />
+            <marker date="1510698651966" expanded="true" signature="1135:1214" ph="DELETE FROM " />
+            <marker date="1510698651966" expanded="true" signature="1185:1213" ph="SELECT id FR... pasta_noodles" />
+            <marker date="1510698651966" expanded="true" signature="1407:1459" ph="SELECT * FRO... pasta_noodles" />
+            <marker date="1510698651966" expanded="true" signature="1802:1885" ph="SELECT * FRO... pasta_noodles" />
+            <marker date="1510698651966" expanded="true" signature="2711:2804" ph="UPDATE pasta... " />
+            <marker date="1510698651966" expanded="true" signature="2967:3054" ph="INSERT INTO pasta_noodles... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pasta_api/v1/shapes/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+          <folding>
+            <marker date="1510698651978" expanded="true" signature="417:431" ph="SELECT * FRO... pasta_shapes" />
+            <marker date="1510698651978" expanded="true" signature="417:457" ph="SELECT * FRO... pasta_shapes" />
+            <marker date="1510698651978" expanded="true" signature="1134:1211" ph="DELETE FROM " />
+            <marker date="1510698651978" expanded="true" signature="1183:1210" ph="SELECT id FR... pasta_shapes" />
+            <marker date="1510698651978" expanded="true" signature="1404:1455" ph="SELECT * FRO... pasta_shapes" />
+            <marker date="1510698651978" expanded="true" signature="1798:1880" ph="SELECT * FRO... pasta_shapes" />
+            <marker date="1510698651978" expanded="true" signature="2706:2798" ph="UPDATE pasta... " />
+            <marker date="1510698651978" expanded="true" signature="2961:3047" ph="INSERT INTO pasta_shapes... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/slate-master/source/index.html.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="303">
+            <caret line="213" column="12" lean-forward="false" selection-start-line="213" selection-start-column="12" selection-end-line="213" selection-end-column="12" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

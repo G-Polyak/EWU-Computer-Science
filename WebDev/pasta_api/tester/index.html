@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pasta Database Tester</title>
+	<link href="../../global.css" rel="stylesheet" type="text/css">
+</head>
+<body style="max-width: 85%">
+<h1 style="align-content: center" id="all">All Pasta</h1>
+<h1 style="align-content: center" id="noodles">Noodles</h1>
+<h1 style="align-content: center" id="shapes">Shapes</h1>
+<div style="float: right; clear: both">
+	<button id="allPasta" style="float: left">Show All Pasta</button>
+	<button id="noodlePasta" style="float: left">Show Noodles</button>
+	<button id="shapePasta" style="float: left">Show Shapes</button>
+</div>
+<div style=" overflow:scroll; height:350px; float: left ">
+	<table border='1' id="tableData" class="prettyTable">
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Uses</th>
+			<th>Classification</th>
+		</tr>
+	</table>
+</div>
+<button id="addEntry">Add Entry</button>
+<button id="cancel">Cancel</button>
+<table border='1' id="tableEntry" class="prettyTable">
+	<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Uses</th>
+		<th>Classification</th>
+	</tr>
+	<tr>
+		<td><input type="text" id="inputName"></td>
+		<td><input type="text" id="inputDescript"></td>
+		<td><input type="text" id="inputUses"></td>
+		<td><input type="text" id="inputClass"></td>
+		<td>
+			<button id="add">Add</button>
+		</td>
+		<td>
+			<button id="edit">Edit</button>
+		</td>
+	</tr>
+</table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
