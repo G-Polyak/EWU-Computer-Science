@@ -1,0 +1,72 @@
+
+\documentclass{article}
+
+\begin{document}
+\begin{enumerate}
+\item \begin{enumerate}
+	\item The idea for finding the maximum value using the divide-conquer stradegy would be to use recursion to find the largest value in the left half, then find the largest value in the right 			half, and then return the larger of the two numbers.\\ 
+	Code:\\
+	int maxValue(int[] A, int low, int high) \{\\
+		if(high-low \begin{math}\leq\end{math}0)\{return A[high];\} else \{\\
+		int left = maxValue(A, low, high/2);\\
+		int right = maxValue(A, high/2, high);\\
+		if(left  \begin{math}\geq\end{math} right)\{return left;\}\\
+		return right;
+	\\\}\}
+	\item \begin{math}\mbox{The recurrence: }T(n) = 2T(\frac{n}{2})+c\\
+	\mbox{Following the picture we have drawn in class several times, we know }\\
+	T(n) = c*\#\mbox{ of items in the tree which we have shown to be } n\\
+	\mbox{Therefore, we can conclude that }T(n)=\Theta(n) 
+	\end{math}
+	\item The two algorithms are asymptotically identical because they both have the same time complexity: \begin{math}\Theta(n)\end{math}
+	\item In practice, the recursion-based implementation is slower because of the memory required to remember each previous step during the recursion's run.
+	\end{enumerate}
+\item \begin{enumerate}
+	\item An idea would be to modify the binary search algorithm and replace the equality check with array[mid] == mid instead of array[mid] == key\\
+	Code:\\
+	int prodFinder(int[] A, int low, int high)\{\\
+	if(low \begin{math}>\end{math} high)\{return -1;\}\\
+	int mid = (low+high)/2;\\
+	if(A[mid] == mid)\{return mid;\}\\
+	else if(a[mid] \begin{math}<\end{math} mid)\{\\
+	return prodFinder(A, mid+1, high);\}\\
+	else\{return prodFinder(A, low, mid-1);\}\\
+	\}
+	\item In theory, this algorithm would have the exact same time complexity as binary search: \begin{math}O(\log n)\end{math}.
+	\end{enumerate}
+\item \begin{enumerate}
+	\item Radix sort\\\begin{enumerate}
+		\item Sort data without comparisons by using individual digits that share the same position and value.
+		\item The algorithm takes the most significant part of each number and groups elements with the same digit into one bucket. Then, each bucket is sorted recursively, starting with 
+			the next digit to the right. Finally, all of the buckets are concatenated together in order.
+		\item \begin{math}O(n)\end{math}
+		\item This algorithm will spend \begin{math}O(n)\end{math} in ANY case.
+		\item https://en.wikipedia.org/wiki/Radix\_sort\#Recursion
+		\end{enumerate}
+	\item Karatsuba algorithm\\\begin{enumerate}
+		\item The multiplication of two \begin{math}n\end{math}-digit numbers.
+		\item If the two numbers are single digits each, then they can be immediately multiplied. Otherwise, If \begin{math}n>1 \mbox{ then the product of 2 } n\end{math}-digit numbers can be expressed in terms of 3 products of 2 \begin{math}(n/2)\end{math}-digit numbers using a specific placement of each number in an equation discovered by Karatsuba.
+		\item \begin{math}\Theta(n \mbox{\^{}} \log 3)\end{math}
+		\item Again, this algorithm will spend \begin{math}\Theta(n \mbox{\^{}} \log 3)\end{math} in ANY case.
+		\item https://en.wikipedia.org/wiki/Karatsuba\_algorithm\#Recursive\_application
+		\end{enumerate}
+	\item Closest Pair algorithm\\\begin{enumerate}
+		\item Given a coordinate plane, find the smallest distance between two points.
+		\item This algorithm works in almost the exact same way as the maximum subarray algorithm in the sense that it divides the plane into two halves and recursively checks to see if the 			closest pair of points is on the left half, the right half, or going across the divide. Once all of the smallest point distances have been found, they are compared to each other recursively 			and in the end the smallest distance is returned.
+		\item \begin{math}O(n\log n)\end{math}
+		\item Again, this algorithm will spend \begin{math}O(n\log n)\end{math} in ANY case.
+		\end{enumerate}
+	\end{enumerate}
+\item \begin{math}T(n)=2T(\frac{n}{3})+n^2=O(n^2)\\
+	c=500\\n_0=1\\
+	T(n)\leq(500)n^2 \mbox{ for all }n\geq(1)\\
+	2T(\frac{n}{3})+n^2=\Sigma(\log_2 n)(i=0)(\frac{2}{9})^i n^2 \leq \Sigma(\infty)(i=0)(\frac{2}{9})^i n^2=\frac{1}{1-2/9}n^2=O(n^2)\\
+	O(n^2)\leq(500)O(n^2)
+	\end{math}
+\item \begin{math}\mbox{The recurrence: }T(n) = 2T(\frac{n}{2})+n^2\\
+	\mbox{Following the picture we have drawn in class several times, we know }\\
+	T(n) = n^2*\#\mbox{ of rows in the tree which we have shown to be } \log_2 n\\
+	\mbox{Therefore, we can conclude that }T(n)=n^2 \log_2 n = \Theta(n^2) 
+	\end{math}
+\end{enumerate}
+\end{document}

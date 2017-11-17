@@ -1,0 +1,10 @@
+My code uses a custom Trade class that holds the 3 values: start, end, and profit.
+The best trade from the array is calculated using binary recursion. First, the best
+trade from the lower half of the array is calculated through a recursive call. Then,
+the upper half of the array is calculated using the same method. Finally, the case
+in which the lower and upper bounds are in seperate halves of the array is calculated
+using a seperate method that searches each half of the array linearly to find the
+smalles and largest numbers respectively. Then a comparison is made between each of
+the 3 cases and the case with the largest profit is returned. The time cost of this
+method is O(n log n) because a modified binary search occurs n times and the modified
+binary search's time cost is O(log n).

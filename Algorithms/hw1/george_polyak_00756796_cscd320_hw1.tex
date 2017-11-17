@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\begin{document}
+\begin{enumerate}
+
+\item The connection between Data Structures and Algorithms is that in Algorithms, we utilize various data structures we have already learned from the Data Structures class to perform specific tasks as efficiently as possible. Data Structures provided us with the tools necessary to complete different tasks and Algorithms provides us different ways of using those tools.
+
+\item \begin{math} f(n)=3n^2+n\sqrt{n}=O(n^2) \\
+	c=10\\n_0=1\\
+	0\leq f(n)\leq(10)n^2 \mbox{ for all }n\geq(1)\\
+	3n^2+n\sqrt{(n)}\leq(10)n^2\\
+	3+\frac{1}{\sqrt{n}}\leq(10)
+	\end{math}
+\item \begin{math}f(n)=2(n+100\sqrt{n})(\log n)^2=o(n\sqrt{n}/\log n)\\
+	c=\mbox{any positive constant}\\n_0=1\\
+	0\leq f(n)<(c)(n\sqrt{n}/\log n) \mbox{ for all }n\geq(1)\\
+	2(n+100\sqrt{n})(\log n)^2<(c)(n\sqrt{n}/\log n)\\
+	\frac{2(n+100\sqrt{n})(\log n)^2}{n\sqrt{n}/\log n}<(c)\\
+	\frac{2(n+100\sqrt{n})(\log n)^3}{n^\frac{3}{2}}<(c)\\
+	\mbox{As }n\mbox{ increases, the left side decreases.}
+	\end{math}
+\item \begin{math}f(n)=10n^3+7n\log n=\Omega(n^3)\\
+	c=20\\n_0=1\\
+	0\leq(20)n^3\leq f(n) \mbox{ for all }n\geq(1)\\
+	(20)n^3\leq10n^3+7n\log n\\
+	(20)\leq \frac{7\log n}{n^2}+10
+	\end{math}
+\item \begin{math}f(n)=2n^2+5n\sqrt{n}=\omega(n\log n)\\
+	c=\mbox{any positive constant}\\n_0=1\\
+	0\leq(c)n\log n<f(n) \mbox{ for all }n\geq(1)\\
+	(c)n\log n<2n^2+5n\sqrt{n}\\
+	(c)<\frac{2n^2+5n\sqrt{n}}{n\log n}\\
+	(c)<\frac{5n^\frac{3}{2}+2n^2}{n\log n}\\
+	\mbox{As }n\mbox{ increases, the right side increases.}\\\\\\\\\\\\\\
+	\end{math}
+\item \begin{math}f(n) \mbox{ and }g(n)=\mbox{positive increasing functions}\\
+	f(n)+g(n)=\Theta(\mbox{max}\{f(n),g(n)\})\\
+	c_1=.001\\c_2=100\\n_0=1\\
+	h(n)=f(n)+g(n)\\j(n)=\mbox{max}\{f(n),g(n)\}\\
+	0\leq(.001)j(n)\leq h(n)\leq(100)j(n)\mbox{ for all }n\geq(1)\\\mbox{Left side:}\\
+	(.001)(\mbox{max}\{f(n),g(n)\})\leq f(n)+g(n)\\
+	(.001)\leq\frac{f(n)+g(n)}{\mbox{max}\{f(n),g(n)\}}\\\mbox{Right side:}\\
+	f(n)+g(n)\leq(100)(\mbox{max}\{f(n),g(n)\})\\
+	\frac{f(n)+g(n)}{\mbox{max}\{f(n),g(n)\}}\leq100\\
+	\mbox{As }n\mbox{ increases, }\frac{f(n)+g(n)}{\mbox{max}\{f(n),g(n)\}}\mbox{ will stay roughly the same.}\\
+	\end{math}
+\item \begin{math}f(n)=\mbox{positive increasing function}\\
+	f(n)=\omega(f(\sqrt{n})) \mbox{ I believe is always true if }f\mbox{ is a positive increasing function}\\
+	\mbox{because for every positive natural number }n\mbox{, }\sqrt{n}<n\mbox{.}\\
+	c=\mbox{any positive constant}\\n_0=1\\
+	0\leq(c)f(\sqrt{n})<f(n)\mbox{ for all }n \geq(1)\\
+	(c)<\frac{f(n)}{f(\sqrt{n})}\\
+	\mbox{As }n\mbox{ increases, the right side increases.}
+	\end{math}
+
+\end{enumerate}
+\end{document}
