@@ -1,0 +1,11 @@
+.root {
+    /* change the base and inner background */
+    -fx-base: rgb(80,80,80);
+    -fx-control-inner-background: rgb(200,200,200);
+}
+.menu-bar {
+
+    -dummy: derive(-fx-base,80%);
+    -fx-background-color:
+            linear-gradient(to bottom, -dummy, -fx-base);
+}
