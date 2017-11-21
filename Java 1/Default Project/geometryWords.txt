@@ -1,0 +1,416 @@
+aa similarity
+aas congruence
+abscissa
+accuracy
+acute angle
+acute triangle
+adjacent
+adjacent angles
+alternate angles
+alternate exterior angles
+alternate interior angles
+altitude
+altitude of a cone
+altitude of a cylinder
+altitude of a parallelogram
+altitude of a prism
+altitude of a pyramid
+altitude of a trapezoid
+altitude of a triangle
+analytic geometry
+angle
+angle bisector
+angle of depression
+angle of elevation
+annulus
+antipodal points
+apex
+apothem
+arc of a circle
+arccos
+arccos
+arcsin
+arcsin
+arctan
+arctan
+area of a circle
+area of a convex polygon
+area of an equilateral triangle
+area of a kite
+area of a parallelogram
+area of a rectangle
+area of a regular polygon
+area of a rhombus
+area of a sector of a circle
+area of a segment of a circle
+area of a trapezoid
+area of a triangle
+arm of an angle
+arm of a right triangle
+asa congruence
+axes
+axis of a cylinder
+axis of reflection
+axis of rotation
+axis of symmetry
+base (geometry)
+base of an isosceles triangle
+base of a trapezoid
+base of a triangle
+between
+bisect
+bisector
+box
+cartesian coordinates
+cartesian form
+cartesian plane
+cavalieri’s principle
+center of rotation
+centers of a triangle
+central angle
+centroid
+centroid formula
+ceva’s theorem
+cevian
+chord
+circle
+circular cone
+circular cylinder
+circular functions
+circumcenter
+circumcircle
+circumference
+circumscribable
+circumscribed
+circumscribed circle
+coincident
+collinear
+complement of an angle
+complementary angles
+composite
+compression
+compression of a geometric figure
+compute
+concave
+concentric
+concurrent
+cone
+cone angle
+congruence tests for triangles
+congruent
+consecutive interior angles
+contrapositive
+contraction
+convex
+coordinate geometry
+coordinate plane
+coordinates
+coplanar
+corresponding
+cos
+cos-1
+cos-1
+cosine
+cpcfc
+cpctc
+cube
+cube root
+cuboid
+cylinder
+decagon
+degenerate
+degree (angle measure)
+diagonal of a polygon
+diameter
+diametrically opposed
+dihedral angle
+dilation
+dilation of a geometric figure
+dimensions
+direct proportion
+direct variation
+directly proportional
+disk
+distance formula
+distinct
+dodecagon
+dodecahedron
+double cone
+edge of a polyhedron
+elliptic geometry
+equation of a line
+equiangular triangle
+equidistant
+equilateral triangle
+euclidean geometry
+euler line
+euler's formula (polyhedra)
+evaluate
+exact values of trig functions
+exterior angle of a polygon
+face of a polyhedron
+fibonacci sequence
+fixed
+flip
+formula
+fractal
+frustum of a cone or pyramid
+geometric figure
+geometric mean
+geometric solid
+geometry
+glide
+glide reflection
+golden mean
+golden ratio
+golden rectangle
+golden spiral
+graph of an equation or inequality
+great circle
+height
+height of a cone
+height of a cylinder
+height of a parallelogram
+height of a prism
+height of a pyramid
+height of a trapezoid
+height of a triangle
+heptagon
+hero’s formula
+heron’s formula
+hexagon
+hexahedron
+hl congruence
+hl similarity
+horizontal
+hyperbolic geometry
+hypotenuse
+icosahedron
+image of a transformation
+incenter
+incircle
+inradius
+inscribed angle in a circle
+inscribed circle
+interior
+interior angle
+invariant
+inverse cosine
+inverse sine
+inverse tangent
+isometry
+isosceles trapezoid
+isosceles triangle
+kite
+lateral area
+lateral surface area
+lateral surface/face
+law of cosines
+law of sines
+leg of an isosceles triangle
+leg of a right triangle
+leg of a trapezoid
+line
+line segment
+linear
+linear pair of angles
+locus
+magnitude
+major arc
+mean
+measure of an angle
+measurement
+median of a trapezoid
+median of a triangle
+menelaus’s theorem
+mensuration
+midpoint
+midpoint formula
+minor arc
+minute
+mobius strip
+negative reciprocal
+n-gon
+no slope
+non-adjacent
+nonagon
+noncollinear
+non-convex
+non-euclidean geometry
+number line
+oblique
+oblique cone
+oblique cylinder
+oblique prism
+oblique pyramid
+obtuse angle
+obtuse triangle
+octagon
+octahedron
+octants
+one dimension
+opposite reciprocal
+ordered pair
+ordered triple
+ordinate
+origin
+orthocenter
+oval
+pappus’s theorem
+parallel lines
+parallel planes
+parallel postulate
+parallelepiped
+parallelogram
+pentagon
+perimeter
+perpendicular
+perpendicular bisector
+phi
+pi
+plane
+plane figure
+plane geometry
+platonic solids
+point
+point of symmetry
+polygon
+polygon interior
+polyhedron
+precision
+pre-image of a transformation
+prism
+proportional
+pyramid
+pythagorean identities
+pythagorean theorem
+pythagorean triple
+quadrangle
+quadrants
+quadrilateral
+radian
+radical
+radicand
+radius of a circle or sphere
+ray
+rectangle
+rectangular coordinates
+rectangular parallelepiped
+reflection
+regular dodecahedron
+regular hexahedron
+regular icosahedron
+regular octahedron
+regular polygon
+regular polyhedra
+regular prism
+regular pyramid
+regular right prism
+regular right pyramid
+regular tetrahedron
+rhombus
+riemannian geometry
+right angle
+right circular cone
+right circular cylinder
+right cone
+right cylinder
+right prism
+right pyramid
+right regular prism
+right regular pyramid
+right square prism
+right triangle
+root of a number
+rotation
+saa congruence
+sas congruence
+sas similarity
+scale factor
+scalene triangle
+secant line
+second
+sector of a circle
+segment
+segment of a circle
+self-similarity
+semicircle
+semiperimeter
+shift
+side of an angle
+side of a polygon
+similar
+similarity tests for triangles
+sin
+sin-1
+sin-1
+sine
+skew lines
+slant height
+slope of a line
+sohcahtoa
+solid
+solid geometry
+sphere
+square
+square root
+ssa
+sss congruence
+sss similarity
+standard position
+stewart's theorem
+straight angle
+supplement
+supplementary angles
+surd
+surface
+surface area
+symmetric
+takeout angle
+tan
+tan-1
+tan-1
+tangent (trig function)
+tangent line
+tau
+tessellate
+tetrahedron
+theorem of menelaus
+theorem of pappus
+theta
+three dimensional coordinates
+three dimensions
+torus
+transformations
+translation
+transversal
+trapezium
+trapezoid
+triangle
+triangle congruence tests
+triangle inequality
+triangle similarity tests
+trig
+trig functions
+trig values of special angles
+trigonometry
+truncated cone or pyramid
+truncated cylinder or prism
+two dimensions
+undecagon
+undefined slope
+unit circle
+varignon parallelogram of a quadrilateral
+vertex
+vertical
+vertical angles
+volume
+washer
+x-intercept
+x-y plane
+x-z plane
+y-intercept
+y-z plane
+z-intercept
+zero dimensions
+zero slope

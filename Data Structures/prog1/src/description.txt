@@ -1,0 +1,7 @@
+The program uses two methods that each utilize a modified binary searth algorithm, one finds and returns the 
+left-most occurence of x and the other finds and returns the right-most occurence of x. The binary search
+algorithm is only modified slightly, adding another condition that must be met in order for the search to 
+stop and changing the order of the previous conditions such that the two methods will not stop early. The new
+condition checks to make sure that the neighboring numbers are not the same, indicating that the present value
+is either the left-most or the right-most occurence. The time cost of this program comes down to C + 2log(n)
+which is translated to Big O notation as O(log(n)).

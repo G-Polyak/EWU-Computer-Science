@@ -1,0 +1,7 @@
+The singularly linked list implements a stack structure such that the head node acts as the top of the stack. 
+The tester class fills an array list (out of convienience) with every line in the text file and sends it to
+a method that calculates the postfix expression in the array list. It does so by looking at each entry in 
+the list and either pushing it to a linked list stack if it is a number or popping out the last two entries
+in the stack and performing the intended operation if the next entry in the list is an operator. When this
+finishes, the only item in the stack is the solution to the postfix expression and that is then displayed on
+the screen.

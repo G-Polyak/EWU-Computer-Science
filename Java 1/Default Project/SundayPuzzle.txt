@@ -1,0 +1,70 @@
+//In class assignment/take-home lab - Sunday Puzzle
+//George Polyak
+
+import java.util.*;
+import java.io.*;
+
+public class DefaultProject
+{
+
+    public static void main(String[] args) throws FileNotFoundException
+    {
+
+        File calcWordFile = new File("calculusWords.txt");
+        File geoWordFile = new File("geometryWords.txt");
+        Scanner calcRead = new Scanner(calcWordFile);
+        Scanner geoRead = new Scanner(geoWordFile);
+        ArrayList<String> calcWords = new ArrayList<String>();
+        ArrayList<String> geoWords = new ArrayList<String>();
+        String theCalcWord = "";
+        String theGeoWord = "";
+
+        while(calcRead.hasNextLine()) {
+
+            String temp1 = calcRead.next();
+            if(temp1.length() == 8) {
+                calcWords.add(temp1);
+            }
+
+        }
+
+        while(geoRead.hasNextLine()) {
+
+            String temp2 = geoRead.next();
+            if(temp2.length() == 8) {
+                geoWords.add(temp2);
+            }
+
+        }
+
+        for (String calcWord : calcWords) {
+
+            for (String geoWord : geoWords) {
+
+                String tempCalc = calcWord;
+                String tempGeo = geoWord;
+
+                if (sort(tempCalc).equals(sort(tempGeo))) {
+                    theCalcWord = calcWord;
+                    theGeoWord = geoWord;
+                }
+
+            }
+
+        }
+
+        System.out.println("The calculus word is: " + theCalcWord);
+        System.out.println("The geometry word is: " + theGeoWord);
+
+    }
+
+    private static String sort(String s) {
+
+        char[] chars = s.toCharArray();
+        Arrays.sort(chars);
+        String sorted = new String(chars);
+        return sorted;
+
+    }
+
+}

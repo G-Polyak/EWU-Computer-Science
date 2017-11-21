@@ -1,0 +1,4 @@
+The program loads a set of numbers in the given file into a Binary Search Tree. Each number is placed into the tree such that
+all of the numbers on the left side of a given node is less than the key of the given node and all of the numbers on the right 
+side of a given code are larger than the key of the given node. Each option in the menu carries out its given task as directed
+by the user.
