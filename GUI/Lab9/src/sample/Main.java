@@ -54,20 +54,24 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        mTempCanvas.getGraphicsContext2D().setFill(Color.TRANSPARENT);
+        mPermCanvas.getGraphicsContext2D().setFill(Color.WHITE);
+        mTempCanvas.getGraphicsContext2D().fillRect(0, 0, 400, 400);
+        mPermCanvas.getGraphicsContext2D().fillRect(0, 0, 400, 400);
         mStage = primaryStage;
         mTextArea.setPrefSize(200, 400);
         mTextArea.setEditable(false);
         ScrollPane half = new ScrollPane(mTextArea);
-        StackPane stackPane = new StackPane(mTempCanvas, mPermCanvas);
+        StackPane stackPane = new StackPane(mPermCanvas, mTempCanvas);
         ScrollPane scrollPane = new ScrollPane();
         scrollPane.setContent(stackPane);
         SplitPane splitPane = new SplitPane(half, scrollPane);
         splitPane.setDividerPosition(0, 0.3);
         makeCanvasWhite();
         mRoot.setCenter(splitPane);
-        mPermCanvas.setOnMousePressed(this::onMousePressed);
-        mPermCanvas.setOnMouseDragged(this::onMouseDragged);
-        mPermCanvas.setOnMouseReleased(this::onMouseReleased);
+        mTempCanvas.setOnMousePressed(this::onMousePressed);
+        mTempCanvas.setOnMouseDragged(this::onMouseDragged);
+        mTempCanvas.setOnMouseReleased(this::onMouseReleased);
         mStage.setOnCloseRequest(actionEvent -> {
             actionEvent.consume();
             onExit();
@@ -95,7 +99,7 @@ public class Main extends Application {
             setStatus("Mouse has been released");
             mTo = new Point2D(mouseEvent.getX(), mouseEvent.getY());
             mTempCanvas.getGraphicsContext2D().clearRect(0, 0, 400, 400);
-            makeCanvasWhite();
+            //makeCanvasWhite();
             if (mTempCanvas.contains(mTo)) {
 
                 Line aLine = new Line(mFrom.getX(), mFrom.getY(), mTo.getX(), mTo.getY(), mWidth, mColor);
@@ -153,6 +157,7 @@ public class Main extends Application {
                     if (!mouseEvent.isShiftDown()) {
 
                         mSelectedLines.clear();
+                        mTempCanvas.getGraphicsContext2D().clearRect(0,0,400,400);
                         mTextArea.setText("");
 
                     }
@@ -169,10 +174,11 @@ public class Main extends Application {
             if (!isFound) {
 
                 mSelectedLines.clear();
+                mTempCanvas.getGraphicsContext2D().clearRect(0,0,400,400);
                 mTextArea.setText("");
 
             }
-            mPermCanvas.getGraphicsContext2D().drawImage(mLastPerm, 0, 0);
+            mTempCanvas.getGraphicsContext2D().drawImage(mLastPerm, 0, 0);
             drawDots();
 
         }
@@ -181,7 +187,7 @@ public class Main extends Application {
 
     private void drawDots() {
 
-        GraphicsContext gc = mPermCanvas.getGraphicsContext2D();
+        GraphicsContext gc = mTempCanvas.getGraphicsContext2D();
         gc.save();
         for (Line line : mSelectedLines) {
 
@@ -195,8 +201,8 @@ public class Main extends Application {
             } else {
                 gc.setFill(color.invert());
             }
-            gc.fillOval(line.getX1(), line.getY1(), wh, wh);
-            gc.fillOval(line.getX2(), line.getY2(), wh, wh);
+            gc.fillOval(line.getX1() - (wh/2), line.getY1() - (wh/2), wh, wh);
+            gc.fillOval(line.getX2() - (wh/2), line.getY2() - (wh/2), wh, wh);
 
         }
         gc.restore();
@@ -209,8 +215,8 @@ public class Main extends Application {
 
     private static void makeCanvasWhite() {
 
-        mTempCanvas.getGraphicsContext2D().setFill(Color.WHITE);
-        mTempCanvas.getGraphicsContext2D().fillRect(0, 0, mTempCanvas.getWidth(), mTempCanvas.getHeight());
+        //mTempCanvas.getGraphicsContext2D().setFill(Color.WHITE);
+        mTempCanvas.getGraphicsContext2D().clearRect(0, 0, mTempCanvas.getWidth(), mTempCanvas.getHeight());
 
     }
 
@@ -579,10 +585,15 @@ public class Main extends Application {
 
     private static void clear() {
 
-        mPermCanvas.getGraphicsContext2D().clearRect(0, 0, 400, 400);
+        mPermCanvas.getGraphicsContext2D().setFill(Color.WHITE);
+        mPermCanvas.getGraphicsContext2D().fillRect(0, 0, 400, 400);
+        mTempCanvas.getGraphicsContext2D().clearRect(0, 0, 400, 400);
         mNeedSave = false;
         mThisFile = null;
         mLines.clear();
+        mSelectedLines.clear();
+        mLastPerm = null;
+        mTextArea.setText("");
 
     }
 
