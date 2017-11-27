@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.geometry.Orientation;
 import javafx.geometry.Point2D;
+import javafx.print.*;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
@@ -25,6 +26,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Optional;
 
 public class Main extends Application {
 
@@ -238,11 +240,11 @@ public class Main extends Application {
         MenuItem printMenuItem = new MenuItem("_Print");
         printMenuItem.setAccelerator(new KeyCodeCombination(KeyCode.P,
                 KeyCombination.CONTROL_DOWN));
-        printMenuItem.setOnAction(actionEvent -> onPrint());
+        printMenuItem.setOnAction(actionEvent -> onPrint(false));
         MenuItem printPrevMenuItem = new MenuItem("Print Pre_view");
         printPrevMenuItem.setAccelerator(new KeyCodeCombination(KeyCode.V,
                 KeyCombination.CONTROL_DOWN));
-        printMenuItem.setOnAction(actionEvent -> onPrintPrev());
+        printMenuItem.setOnAction(actionEvent -> onPrint(true));
         SeparatorMenuItem dashes2 = new SeparatorMenuItem();
         MenuItem exitMenuItem = new MenuItem("E_xit");
         exitMenuItem.setAccelerator(new KeyCodeCombination(KeyCode.X,
@@ -291,15 +293,67 @@ public class Main extends Application {
 
     }
 
-    private static void onPrintPrev() {
+    private static void onPrint(boolean preview){
 
+        mPermCanvas.getGraphicsContext2D().drawImage(mLastPerm, 0, 0);
+        mSelectedLines.clear();
+        Printer printer = Printer.getDefaultPrinter();
+        PageLayout pageLayout = printer.createPageLayout(Paper.NA_LETTER, PageOrientation.PORTRAIT, Printer.MarginType.DEFAULT);
+        double destW = pageLayout.getPrintableWidth();
+        double destH = pageLayout.getPrintableHeight();
+        double srcW = mPermCanvas.getWidth();
+        double srcH = mPermCanvas.getHeight();
+        double scaleX = destW/srcW;
+        double scaleY = destH/srcH;
+        double scale = (scaleX>scaleY) ? scaleY : scaleX;
+        double leftM = pageLayout.getLeftMargin();
+        double topM = pageLayout.getTopMargin();
+        double rightM = pageLayout.getRightMargin();
+        double bottomM = pageLayout.getBottomMargin();
+        double totalW = destW + leftM + rightM;
+        double totalH = destH + topM + bottomM;
+        Canvas temp;
+        if(preview){
+
+            temp = new Canvas(totalW, totalH);
+            WritableImage image = mPermCanvas.snapshot(null, null);
+            GraphicsContext gc = temp.getGraphicsContext2D();
+            gc.setFill(Color.WHITE);
+            gc.fillRect(0, 0, totalW, totalH);
+            gc.setStroke(Color.LIGHTGRAY);
+            gc.strokeRect(leftM, topM, destW, destH);
+            gc.drawImage(image, leftM, topM, scale*srcW, scale*srcH);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Print Preview");
+            alert.setHeaderText("Print Preview (with margins)");
+            alert.getDialogPane().setExpandableContent(new ScrollPane(temp));
+            alert.getDialogPane().setExpanded(true);
+            ButtonType bPrint = new ButtonType("Print");
+            ButtonType bCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(bPrint, bCancel);
+            Optional<ButtonType> result = alert.showAndWait();
+            if(result.isPresent() && result.get() == bCancel) {
+                return;
+            }
+
+        }
+        temp = new Canvas(destW, destH);
+        WritableImage image = mPermCanvas.snapshot(null, null);
+        GraphicsContext gc = temp.getGraphicsContext2D();
+        gc.drawImage(image, 0, 0, scale*srcW, scale*srcH);
+        PrinterJob job = PrinterJob.createPrinterJob(printer);
+        job.getJobSettings().setPageLayout(pageLayout);
+        if(job.showPrintDialog(mPermCanvas.getScene().getWindow())){
+
+            boolean success = job.printPage(temp);
+            if(success) {
+                job.endJob();
+            }
+
+        }
 
     }
 
-    private static void onPrint() {
-
-
-    }
 
     private static void onExit() {
 
@@ -380,7 +434,7 @@ public class Main extends Application {
         buttons[3].setOnAction(actionEvent -> onWidth());
         buttons[4].setOnAction(actionEvent -> onColor());
         buttons[5].setOnAction(actionEvent -> onToolbarMove());
-        buttons[6].setOnAction(actionEvent -> onPrintPrev());
+        buttons[6].setOnAction(actionEvent -> onPrint(true));
 
         buttons[0].setTooltip(new Tooltip("Create new Canvas"));
         buttons[1].setTooltip(new Tooltip("Open file"));
