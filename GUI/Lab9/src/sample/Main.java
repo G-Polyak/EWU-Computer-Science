@@ -157,7 +157,7 @@ public class Main extends Application {
                     if (!mouseEvent.isShiftDown()) {
 
                         mSelectedLines.clear();
-                        mTempCanvas.getGraphicsContext2D().clearRect(0,0,400,400);
+                        mTempCanvas.getGraphicsContext2D().clearRect(0, 0, 400, 400);
                         mTextArea.setText("");
 
                     }
@@ -174,7 +174,7 @@ public class Main extends Application {
             if (!isFound) {
 
                 mSelectedLines.clear();
-                mTempCanvas.getGraphicsContext2D().clearRect(0,0,400,400);
+                mTempCanvas.getGraphicsContext2D().clearRect(0, 0, 400, 400);
                 mTextArea.setText("");
 
             }
@@ -201,8 +201,8 @@ public class Main extends Application {
             } else {
                 gc.setFill(color.invert());
             }
-            gc.fillOval(line.getX1() - (wh/2), line.getY1() - (wh/2), wh, wh);
-            gc.fillOval(line.getX2() - (wh/2), line.getY2() - (wh/2), wh, wh);
+            gc.fillOval(line.getX1() - (wh / 2), line.getY1() - (wh / 2), wh, wh);
+            gc.fillOval(line.getX2() - (wh / 2), line.getY2() - (wh / 2), wh, wh);
 
         }
         gc.restore();
@@ -299,7 +299,7 @@ public class Main extends Application {
 
     }
 
-    private static void onPrint(boolean preview){
+    private static void onPrint(boolean preview) {
 
         mPermCanvas.getGraphicsContext2D().drawImage(mLastPerm, 0, 0);
         mSelectedLines.clear();
@@ -309,9 +309,9 @@ public class Main extends Application {
         double destH = pageLayout.getPrintableHeight();
         double srcW = mPermCanvas.getWidth();
         double srcH = mPermCanvas.getHeight();
-        double scaleX = destW/srcW;
-        double scaleY = destH/srcH;
-        double scale = (scaleX>scaleY) ? scaleY : scaleX;
+        double scaleX = destW / srcW;
+        double scaleY = destH / srcH;
+        double scale = (scaleX > scaleY) ? scaleY : scaleX;
         double leftM = pageLayout.getLeftMargin();
         double topM = pageLayout.getTopMargin();
         double rightM = pageLayout.getRightMargin();
@@ -319,7 +319,7 @@ public class Main extends Application {
         double totalW = destW + leftM + rightM;
         double totalH = destH + topM + bottomM;
         Canvas temp;
-        if(preview){
+        if (preview) {
 
             temp = new Canvas(totalW, totalH);
             WritableImage image = mPermCanvas.snapshot(null, null);
@@ -328,7 +328,7 @@ public class Main extends Application {
             gc.fillRect(0, 0, totalW, totalH);
             gc.setStroke(Color.LIGHTGRAY);
             gc.strokeRect(leftM, topM, destW, destH);
-            gc.drawImage(image, leftM, topM, scale*srcW, scale*srcH);
+            gc.drawImage(image, leftM, topM, scale * srcW, scale * srcH);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Print Preview");
             alert.setHeaderText("Print Preview (with margins)");
@@ -338,7 +338,7 @@ public class Main extends Application {
             ButtonType bCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
             alert.getButtonTypes().setAll(bPrint, bCancel);
             Optional<ButtonType> result = alert.showAndWait();
-            if(result.isPresent() && result.get() == bCancel) {
+            if (result.isPresent() && result.get() == bCancel) {
                 return;
             }
 
@@ -346,13 +346,13 @@ public class Main extends Application {
         temp = new Canvas(destW, destH);
         WritableImage image = mPermCanvas.snapshot(null, null);
         GraphicsContext gc = temp.getGraphicsContext2D();
-        gc.drawImage(image, 0, 0, scale*srcW, scale*srcH);
+        gc.drawImage(image, 0, 0, scale * srcW, scale * srcH);
         PrinterJob job = PrinterJob.createPrinterJob(printer);
         job.getJobSettings().setPageLayout(pageLayout);
-        if(job.showPrintDialog(mPermCanvas.getScene().getWindow())){
+        if (job.showPrintDialog(mPermCanvas.getScene().getWindow())) {
 
             boolean success = job.printPage(temp);
-            if(success) {
+            if (success) {
                 job.endJob();
             }
 
