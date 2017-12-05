@@ -140,6 +140,15 @@ public class Ghost {
 
     }
 
+    public void erase(Canvas canvas) {
+
+        double pixelSize = canvas.getWidth() / pixel;
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setFill(Color.LIGHTBLUE);
+        gc.fillRect(this.x * pixelSize, this.y * pixelSize, pixelSize, pixelSize);
+
+    }
+
     private String getOppositeDirection() {
 
         switch (direction) {

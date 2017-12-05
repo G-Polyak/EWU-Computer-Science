@@ -18,17 +18,19 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.Optional;
+import java.util.prefs.PreferenceChangeEvent;
+import java.util.prefs.Preferences;
 
 public class Main extends Application {
 
     public static Canvas board = new Canvas(500, 500);
     public static Canvas pieces = new Canvas(500, 500);
     private static int lvl = 1;
-    private static Maze maze = new Maze(lvl);
-    private static Ghost[] ghosts = new Ghost[]{new Ghost(maze),
-            new Ghost(maze)};
-    private static Player player = new Player(maze, ghosts);
+    private static Maze maze;
+    private static Ghost[] ghosts;
+    private static Player player;
     private static long mPreviousTime = 0;
     private static int mWorkStep = 0;
     private static Label label;
@@ -38,6 +40,10 @@ public class Main extends Application {
     private static MenuItem pauseMenuItem;
     private static MenuItem openMenuItem;
     private static MenuItem saveMenuItem;
+    private static MenuItem settingsMenuItem;
+    private static int initGhosts;
+    private static int addGhosts;
+    private static Preferences mPrefs;
 
     private static AnimationTimer mTimer = new AnimationTimer() {
 
@@ -51,6 +57,17 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        AppSettings.readPrefs(getClass());
+        mPrefs = Preferences.userNodeForPackage(getClass());
+        mPrefs.addPreferenceChangeListener(this::onPrefChanged);
+        initGhosts = AppSettings.initGhosts;
+        addGhosts = AppSettings.addGhosts;
+        maze = new Maze(lvl);
+        ghosts = new Ghost[initGhosts];
+        for (int i = 0; i < ghosts.length; i++) {
+            ghosts[i] = new Ghost(maze);
+        }
+        player = new Player(maze, ghosts);
         resetWinLose();
         populateBoard();
         StackPane stackPane = new StackPane(board, pieces);
@@ -101,6 +118,10 @@ public class Main extends Application {
 
     }
 
+    private void onPrefChanged(PreferenceChangeEvent prefChangeEvent) {
+        Platform.runLater(Main::updatePrefs);
+    }
+
     private void resetWinLose() {
 
         lose = new SimpleBooleanProperty();
@@ -126,6 +147,7 @@ public class Main extends Application {
         pauseMenuItem.setDisable(true);
         openMenuItem.setDisable(false);
         saveMenuItem.setDisable(false);
+        settingsMenuItem.setDisable(false);
         mTimer.stop();
 
     }
@@ -136,6 +158,7 @@ public class Main extends Application {
         pauseMenuItem.setDisable(false);
         openMenuItem.setDisable(true);
         saveMenuItem.setDisable(true);
+        settingsMenuItem.setDisable(true);
         mTimer.start();
 
     }
@@ -197,16 +220,34 @@ public class Main extends Application {
         pieces.getGraphicsContext2D().clearRect(0, 0,
                 pieces.getWidth(), pieces.getHeight());
         maze = new Maze(lvl);
-        if (lvl == 1) {
-            ghosts = new Ghost[]{new Ghost(maze), new Ghost(maze)};
-        } else {
-            ghosts = new Ghost[]{new Ghost(maze), new Ghost(maze),
-                    new Ghost(maze), new Ghost(maze)};
-        }
+        resetGhosts();
         player = new Player(maze, ghosts);
         populateBoard();
         updateLabel();
         mPreviousTime = 0;
+        goMenuItem.setDisable(false);
+        pauseMenuItem.setDisable(true);
+        settingsMenuItem.setDisable(false);
+
+    }
+
+    private static void resetGhosts() {
+
+        if (lvl == 1) {
+
+            ghosts = new Ghost[initGhosts];
+            for (int i = 0; i < initGhosts; i++) {
+                ghosts[i] = new Ghost(maze);
+            }
+
+        } else {
+
+            ghosts = new Ghost[initGhosts + addGhosts];
+            for (int i = 0; i < initGhosts + addGhosts; i++) {
+                ghosts[i] = new Ghost(maze);
+            }
+
+        }
 
     }
 
@@ -325,7 +366,7 @@ public class Main extends Application {
         pauseMenuItem.setOnAction(actionEvent -> onStop());
         pauseMenuItem.setDisable(true);
         SeparatorMenuItem dashes3 = new SeparatorMenuItem();
-        MenuItem settingsMenuItem = new MenuItem("S_ettings");
+        settingsMenuItem = new MenuItem("S_ettings");
         settingsMenuItem.setAccelerator(new KeyCodeCombination(KeyCode.E,
                 KeyCombination.CONTROL_DOWN));
         settingsMenuItem.setOnAction(actionEvent -> onSettings());
@@ -341,7 +382,37 @@ public class Main extends Application {
 
     }
 
-    private void onSettings() {
+    private static void updatePrefs() {
+
+        int temp = initGhosts;
+        initGhosts = AppSettings.initGhosts;
+        addGhosts = AppSettings.addGhosts;
+        if (lvl == 1 && temp != initGhosts) {
+
+            for (Ghost ghost : ghosts) {
+                ghost.erase(pieces);
+            }
+            resetGhosts();
+            for (Ghost ghost : ghosts) {
+                ghost.drawGhost(pieces);
+            }
+
+        }
+
+    }
+
+    private static void onSettings() {
+
+        try {
+
+            Controller controller = new Controller();
+            controller.show();
+            settingsMenuItem.setDisable(true);
+            controller.setOnCloseRequest(actionEvent -> settingsMenuItem.setDisable(false));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
