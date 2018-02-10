@@ -1,0 +1,127 @@
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(0, 20), (100,120)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(80, 0), (500,60)
+
+The rectangles with corner coordinates:
+(0, 20), (100,120)
+and
+(80, 0), (500,60)
+overlap at:
+(80, 0), (100,120)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(0, 0), (9999,9999)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(0, 0), (1,1)
+
+The rectangles with corner coordinates:
+(0, 0), (9999,9999)
+and
+(0, 0), (1,1)
+overlap at:
+(0, 0), (1,9999)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(9998, 9998), (9999,9999)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(0, 0), (9999,9999)
+
+The rectangles with corner coordinates:
+(9998, 9998), (9999,9999)
+and
+(0, 0), (9999,9999)
+overlap at:
+(9998, 0), (9999,9999)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(0, 0), (10,10)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(10, 0), (20,10)
+
+The rectangles with corner coordinates:
+(0, 0), (10,10)
+and
+(10, 0), (20,10)
+overlap at:
+(10, 0), (10,10)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(0, 0), (9999,9999)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(5, 5), (100,100)
+
+The rectangles with corner coordinates:
+(0, 0), (9999,9999)
+and
+(5, 5), (100,100)
+overlap at:
+(5, 0), (100,9999)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Enter upper left X coordinate of first rectangle:
+Enter upper left Y coordinate of first rectangle:
+Enter lower right X coordinate of first rectangle:
+Enter lower right Y coordinate of first rectangle:
+(5, 5), (100,100)
+
+
+Enter upper left X coordinate of second rectangle:
+Enter upper left Y coordinate of second rectangle:
+Enter lower right X coordinate of second rectangle:
+Enter lower right Y coordinate of second rectangle:
+(4, 4), (101,101)
+
+The rectangles with corner coordinates:
+(5, 5), (100,100)
+and
+(4, 4), (101,101)
+overlap at:
+(5, 4), (100,101)
+
+Enter 'y' to try another set of rectangles, any other character to quit:
+Goodbye!
