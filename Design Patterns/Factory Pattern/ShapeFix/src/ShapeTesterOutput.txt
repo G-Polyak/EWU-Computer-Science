@@ -1,0 +1,73 @@
+Name:	Circle
+Area:	28.2743
+
+Name:	Rectangle
+Area:	12.0000
+
+Name:	Square
+Area:	25.0000
+
+Name:	Circle
+Area:	78.5398
+
+Name:	Rectangle
+Area:	12.0000
+
+Name:	Square
+Area:	4.0000
+
+Name:	Circle
+Area:	113.0973
+
+Name:	Rectangle
+Area:	22.0000
+
+Name:	Square
+Area:	49.0000
+
+Name:	Circle
+Area:	153.9380
+
+Name:	Rectangle
+Area:	30.0000
+
+Name:	Square
+Area:	36.0000
+
+
+Name:	Circle
+Area:	28.2743
+
+Name:	Circle
+Area:	78.5398
+
+Name:	Circle
+Area:	113.0973
+
+Name:	Circle
+Area:	153.9380
+
+Name:	Rectangle
+Area:	12.0000
+
+Name:	Rectangle
+Area:	12.0000
+
+Name:	Rectangle
+Area:	22.0000
+
+Name:	Rectangle
+Area:	30.0000
+
+Name:	Square
+Area:	4.0000
+
+Name:	Square
+Area:	25.0000
+
+Name:	Square
+Area:	36.0000
+
+Name:	Square
+Area:	49.0000
+
