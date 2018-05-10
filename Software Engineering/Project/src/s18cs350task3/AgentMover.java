@@ -98,12 +98,8 @@ public class AgentMover implements I_Updatable {
 
     private boolean isAzimuthTargetClockwise() {
 
-        double calc = 180 + azimuth;
-        double otherEnd = (calc <= 360) ? calc : (360 - calc);
-        if (azimuth <= 180) {
-            return azimuthTarget <= otherEnd;
-        }
-        return azimuthTarget <= otherEnd || azimuthTarget > azimuth;
+        double calc = azimuthTarget - azimuth;
+        return calc > 0 && calc <= 180 || calc < 0 && (360 + calc) <= 180;
 
     }
 
@@ -112,8 +108,9 @@ public class AgentMover implements I_Updatable {
         if (distance < 0) {
             throw new RuntimeException("Invalid distance");
         }
-        return Math.abs(this.x - x) <= distance && Math.abs(this.y - y) <= distance &&
-                Math.abs(this.z - z) <= distance;
+        double calc = Math.sqrt((x - this.x) * (x - this.x) + (y - this.y) * (y - this.y) +
+                (z - this.z) * (z - this.z));
+        return calc <= distance;
 
     }
 
@@ -128,7 +125,7 @@ public class AgentMover implements I_Updatable {
 
     public void setAzimuthTarget(double azimuth, boolean isClockwise) {
 
-        if (azimuth < 0) {
+        if (azimuth < 0 || azimuth > 360) {
             throw new RuntimeException("Invalid azimuth");
         }
         double calc;
@@ -161,24 +158,36 @@ public class AgentMover implements I_Updatable {
 
                 calc = azimuth + azimuthDelta;
                 if (calc > 360) {
-                    calc = 360 - calc;
-                } else if (calc < 0) {
-                    calc = 360 + calc;
-                }
-                if (calc > azimuthTarget) {
-                    calc = azimuthTarget;
+
+                    calc = calc - 360;
+                    if (azimuthTarget > 180 || azimuthTarget < calc) {
+                        calc = azimuthTarget;
+                    }
+
+                } else {
+
+                    if (calc > azimuthTarget) {
+                        calc = azimuthTarget;
+                    }
+
                 }
 
             } else {
 
                 calc = azimuth - azimuthDelta;
-                if (calc > 360) {
-                    calc = 360 - calc;
-                } else if (calc < 0) {
-                    calc = 360 + calc;
-                }
-                if (calc < azimuthTarget) {
-                    calc = azimuthTarget;
+                if (calc < 0) {
+
+                    calc = calc + 360;
+                    if (azimuthTarget < 180 || azimuthTarget > calc) {
+                        calc = azimuthTarget;
+                    }
+
+                } else {
+
+                    if (calc < azimuthTarget) {
+                        calc = azimuthTarget;
+                    }
+
                 }
 
             }
