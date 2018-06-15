@@ -1,0 +1,35 @@
+XOO
+OXX
+XOX
+
+XXO
+OOX
+O X
+
+OOO
+OXX
+XX 
+
+XOX
+OOX
+XXO
+
+XXX
+OO 
+   
+
+OOO
+XX 
+X  
+
+OXX
+XOO
+XOX
+
+XXX
+OO 
+X O
+
+OOO
+ XX
+XXO
