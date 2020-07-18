@@ -1,0 +1,15 @@
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\bin\Debug\AnimateBall.exe.config
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\bin\Debug\AnimateBall.exe
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\bin\Debug\AnimateBall.pdb
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\Assignment4.csprojAssemblyReference.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\MainWindow.g.cs
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\App.g.cs
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall_MarkupCompile.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall_MarkupCompile.lref
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\MainWindow.baml
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall.g.resources
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall.Properties.Resources.resources
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\Assignment4.csproj.GenerateResource.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\Assignment4.csproj.CoreCompileInputs.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall.exe
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment4\Assignment4\obj\Debug\AnimateBall.pdb
