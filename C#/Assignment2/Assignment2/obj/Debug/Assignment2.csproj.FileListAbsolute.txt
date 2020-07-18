@@ -1,0 +1,7 @@
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\bin\Debug\Assignment2.exe.config
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\bin\Debug\Assignment2.exe
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\bin\Debug\Assignment2.pdb
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\obj\Debug\Assignment2.csprojAssemblyReference.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\obj\Debug\Assignment2.csproj.CoreCompileInputs.cache
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\obj\Debug\Assignment2.exe
+D:\!Stuff and Things\Coding Projects\EWU-Computer-Science\C# Programming\Assignment2\Assignment2\obj\Debug\Assignment2.pdb
