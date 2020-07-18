@@ -1,0 +1,36 @@
+﻿<Window x:Name="chooseWindow" x:Class="HolidayMailer.ChooseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolidayMailer"
+        xmlns:grid="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
+        Title="Choose Recipients" Height="300" Width="472" ResizeMode="NoResize" Closing="ChooseWindow_Close">
+    <Grid>
+        <GroupBox Header="Recipient Details" Name="recipientDetails" Margin="0,32,0,44">
+            <grid:DataGrid x:Name="chooseGrid" x:Uid="MyDataGrid" AutoGenerateColumns="False" AlternationCount="1" SelectionMode="Single" IsReadOnly="True" HeadersVisibility="Column" FontSize="12" >
+                <grid:DataGrid.Columns>
+                    <grid:DataGridTemplateColumn>
+                        <grid:DataGridTemplateColumn.Header>
+                            <CheckBox x:Name="selectAllCheckBox" Content="Select" Checked="SelectAllCheckBox_Checked" Unchecked="SelectAllCheckBox_Unchecked" />
+                        </grid:DataGridTemplateColumn.Header>
+                        <grid:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Name="checkedRecord" IsChecked="{Binding Path=ischecked,Mode=TwoWay}" Margin="45 2 0 0" Checked="CheckedRecord_Checked" Unchecked="CheckedRecord_Unchecked"  />
+                            </DataTemplate>
+                        </grid:DataGridTemplateColumn.CellTemplate>
+                    </grid:DataGridTemplateColumn>
+                    <grid:DataGridTextColumn Binding="{Binding Path=LastName}" IsReadOnly="True" Header="Last Name"/>
+                    <grid:DataGridTextColumn Binding="{Binding Path=FirstName}" Header="First Name" IsReadOnly="True" />
+                    <grid:DataGridTextColumn Binding="{Binding Path=EmailAddress}" Header="E-Mail Address" IsReadOnly="True" />
+                    <grid:DataGridTextColumn Binding="{Binding Path=EmailLastYear}" Header="E-Mail last year?" IsReadOnly="True" />
+                </grid:DataGrid.Columns>
+            </grid:DataGrid>
+        </GroupBox>
+        <CheckBox x:Name="lastYearCheckBox" Content="Only recipients that sent a holiday E-Mail last year" HorizontalAlignment="Left" Margin="4,16,0,0" VerticalAlignment="Top" Checked="LastYearCheckBox_Checked" Unchecked="LastYearCheckBox_Unchecked"/>
+        <Button x:Name="submitChosenBtn" Content="Submit" HorizontalAlignment="Left" Margin="190,230,0,0" VerticalAlignment="Top" Click="SubmitChosenBtn_Click" Width="75"/>
+
+    </Grid>
+</Window>

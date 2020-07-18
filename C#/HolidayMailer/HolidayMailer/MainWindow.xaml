@@ -1,0 +1,74 @@
+﻿<Window x:Name="mainWindow" x:Class="HolidayMailer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HolidayMailer"
+        mc:Ignorable="d"
+        Title="Holiday Mailer" Height="450" Width="800" ResizeMode="NoResize" Closing="Close_Click" Icon="Icon.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="794" Margin="0,0">
+            <MenuItem Header="_File">
+                <MenuItem x:Name="attachMenu" Header="Attach _Document" ToolTip="Attaches a given document to the e-mail" Click="AttachBtn_Click" />
+                <MenuItem x:Name="chooseMenu" Header="Choose _Recipient(s)" ToolTip="Opens dialog for the selection of e-mail recipients" Click="ChooseBtn_Click" />
+                <Separator />
+                <MenuItem x:Name="sendMenu" Header="_Send E-Mail" ToolTip="Sends e-mail to specified recipients" Click="SendBtn_Click" />
+                <Separator />
+                <MenuItem x:Name="exitMenu" Header="E_xit" Click="Close_Click" ToolTip="Closes the program" />
+            </MenuItem>
+            <MenuItem Header="_People">
+                <MenuItem x:Name="refreshPeopleMenu" Header="_Refresh DB" Click="RefreshPeopleBtn_Click" ToolTip="Refreshes the People database" />
+                <MenuItem x:Name="addPersonMenu" Header="_Add Person" Click="AddPersonBtn_Click" ToolTip="Opens dialog for adding a new person to the database" />
+                <Separator />
+                <MenuItem x:Name="clearPeopleMenu" Header="_Clear DB" Click="ClearPeopleBtn_Click" ToolTip="***Clears entire contents of the People database***" />
+            </MenuItem>
+            <MenuItem Header="_Holidays">
+                <MenuItem x:Name="refreshHolidaysMenu" Header="_Refresh DB" Click="RefreshHolidaysBtn_Click" ToolTip="Refreshes the Holidays database" />
+                <MenuItem x:Name="addHolidayMenu" Header="_Add Holiday" Click="AddHolidayBtn_Click" ToolTip="Opens dialog for adding a new holiday to the database" />
+                <Separator />
+                <MenuItem x:Name="clearHolidaysMenu" Header="_Clear DB" Click="ClearHolidaysBtn_Click" ToolTip="***Clears entire contents of the Holiday database***" />
+            </MenuItem>
+            <MenuItem x:Name="aboutMenu" Header="_About" Click="AboutMenu_Click" ToolTip="Shows details about the program" />
+        </Menu>
+        <TabControl x:Name="tabs" HorizontalAlignment="Left" Height="392" Margin="0,32,0,0" VerticalAlignment="Top" Width="794">
+            <TabItem x:Name="sendTab" Header="Send E-Mail" Margin="260,0,-264,0">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Subject:" HorizontalAlignment="Left" Margin="24,12,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="emailSubject" HorizontalAlignment="Left" Height="23" Margin="24,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" MaxLength="255"/>
+                    <Label Content="Body:" HorizontalAlignment="Left" Margin="24,62,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="emailBody" HorizontalAlignment="Left" Height="260" Margin="24,88,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
+                    <Button x:Name="sendBtn" Content="Send" HorizontalAlignment="Left" Margin="552,212,0,0" VerticalAlignment="Top" Width="75" Click="SendBtn_Click" ToolTip="Sends e-mail to specified recipients" />
+                    <Button x:Name="attachBtn" Content="Attach Document" HorizontalAlignment="Left" Margin="536,39,0,0" VerticalAlignment="Top" Width="108" Click="AttachBtn_Click" ToolTip="Attaches a given document to the e-mail"/>
+                    <CheckBox x:Name="docAttached" Content="Document attached!" HorizontalAlignment="Left" Margin="536,69,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" Visibility="Hidden"/>
+                    <Button x:Name="chooseBtn" Content="Choose Recipient(s)" HorizontalAlignment="Left" Margin="536,112,0,0" VerticalAlignment="Top" Width="116" Click="ChooseBtn_Click" ToolTip="Opens dialog for the selection of e-mail recipients"/>
+                    <CheckBox x:Name="recipsChosen" Content="Recipient(s) chosen!" HorizontalAlignment="Left" Margin="536,140,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" Visibility="Hidden"/>
+                    <CheckBox x:Name="emailSent" Content="E-Mail(s) sent!" HorizontalAlignment="Left" Margin="554,240,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" Visibility="Hidden"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="peopleTab" Header="People" Margin="272,0,-276,0">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="peopleGrid" HorizontalAlignment="Left" Height="338" Margin="4,10,0,0" VerticalAlignment="Top" Width="550"/>
+                    <Button x:Name="refreshPeopleBtn" Content="Refresh DB" HorizontalAlignment="Left" Margin="562,10,0,0" VerticalAlignment="Top" Width="75" Click="RefreshPeopleBtn_Click" ToolTip="Refreshes the People database"/>
+                    <CheckBox x:Name="filterLetter" Content="Filter by 1st letter in Last Name?" HorizontalAlignment="Left" Margin="562,38,0,0" VerticalAlignment="Top" Checked="FilterLetter_Checked" Unchecked="FilterLetter_Unchecked"/>
+                    <TextBox x:Name="filterLetterTxt" HorizontalAlignment="Left" Height="23" Margin="562,60,0,0" TextWrapping="Wrap" Text="Enter Letter" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+                    <Button x:Name="addPersonBtn" Content="Add Person" HorizontalAlignment="Left" Margin="562,100,0,0" VerticalAlignment="Top" Width="75" Click="AddPersonBtn_Click" ToolTip="Opens dialog for adding a new person to the database"/>
+                    <Button x:Name="submitLetterBtn" Content="Submit" HorizontalAlignment="Left" Margin="654,61,0,0" VerticalAlignment="Top" Width="60" Click="SubmitLetter_Click" IsEnabled="False" ToolTip="Submits query with specified letter"/>
+                    <Button x:Name="clearPeopleBtn" Content="Clear DB" HorizontalAlignment="Left" Margin="562,300,0,0" VerticalAlignment="Top" Width="75" Click="ClearPeopleBtn_Click" ToolTip="***Clears entire contents of the People database***"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="holidaysTab" Header="Holidays" Margin="284,0,-288,0">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="holidayGrid" HorizontalAlignment="Left" Height="338" Margin="4,10,0,0" VerticalAlignment="Top" Width="550"/>
+                    <Button x:Name="refreshHolidaysBtn" Content="Refresh DB" HorizontalAlignment="Left" Margin="562,32,0,0" VerticalAlignment="Top" Width="75" Click="RefreshHolidaysBtn_Click" ToolTip="Refreshes the Holidays database"/>
+                    <CheckBox x:Name="autoEmail" Content="Automatically E-Mail on Holidays?" HorizontalAlignment="Left" Margin="562,10,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="addHolidayBtn" Content="Add Holiday" HorizontalAlignment="Left" Margin="562,100,0,0" VerticalAlignment="Top" Width="80" Click="AddHolidayBtn_Click" ToolTip="Opens dialog for adding a new holiday to the database"/>
+                    <Button x:Name="clearHolidaysBtn" Content="Clear DB" HorizontalAlignment="Left" Margin="562,300,0,0" VerticalAlignment="Top" Width="75" Click="ClearHolidaysBtn_Click" ToolTip="***Clears entire contents of the Holiday database***"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <Label x:Name="autoEmailsSent" Content="Holiday auto E-Mail(s) sent!" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+
+    </Grid>
+    
+</Window>
